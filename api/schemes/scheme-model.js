@@ -101,6 +101,7 @@ async function findById(scheme_id) { // EXERCISE B
     scheme_name: rows[0].scheme_name,
     steps: []
   }
+
   rows.forEach(row => {
     if(row.step_id) {
       result.steps.push({
@@ -110,6 +111,7 @@ async function findById(scheme_id) { // EXERCISE B
       })
     }
   })
+  
   return result
 }
 
